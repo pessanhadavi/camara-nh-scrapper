@@ -1,3 +1,4 @@
+require 'open-uri'
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show]
 
