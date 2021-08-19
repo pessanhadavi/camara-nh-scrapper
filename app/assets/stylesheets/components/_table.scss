@@ -1,8 +1,6 @@
 table {
-  border-collapse: collapse;
   margin: 25px 0;
   font-size: 0.9em;
-  width: 100%;
   border-radius: 5px 5px 0 0;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -12,8 +10,15 @@ table {
     text-align: center;
     font-weight: bold;
   }
+  thead th {
+    padding: 5px 10px;
+  }
   tbody tr {
     border-bottom: 1px solid #dddddd;
     text-align: center;
+  }
+  tbody td {
+    padding: 10px 10px;
+    width: 100px;
   }
 }
