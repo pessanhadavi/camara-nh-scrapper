@@ -1,36 +1,38 @@
 <div class="container">
-<%= button_to 'Scrape', scrape_projects_path, class: "btn btn-success" %>
-<h1>Projetos de Lei </h1>
+  <div class="d-flex align-items-center justify-content-between my-4">
+    <h1>Projetos de Lei - Nova Hamburgo - RS</h1>
+    <%= button_to 'Scrape', scrape_projects_path, class: "btn btn-danger" %>
+  </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Projeto de Lei</th>
-      <th>Descrição</th>
-      <th>Autor</th>
-      <th>Local atual</th>
-      <th>Status</th>
-      <th>Data da última ação</th>
-      <th>Documentos acessórios</th>
-      <th>Texto Original</th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @projects.each do |project| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= link_to project.law, project.law_url, target: "_blank" %></td>
-        <td><%= project.description %></td>
-        <td><%= project.author %></td>
-        <td><%= project.current_local %></td>
-        <td><%= project.status %></td>
-        <td><%= project.last_processing %></td>
-        <td><%= link_to project.accessory_docs, project.accessory_docs_url, target: "_blank" %></td>
-        <td><%= link_to "Texto original", project.original_text, target: "_blank" %></td>
-        <td><%= link_to 'Detalhes', project %></td>
+        <th>Projeto de Lei</th>
+        <th>Descrição</th>
+        <th>Autor</th>
+        <th>Local atual</th>
+        <th>Status</th>
+        <th>Data da última ação</th>
+        <th>Documentos acessórios</th>
+        <th>Texto Original</th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @projects.each do |project| %>
+        <tr>
+          <td><%= link_to project.law, project.law_url, target: "_blank" %></td>
+          <td><%= project.description %></td>
+          <td><%= project.author %></td>
+          <td><%= project.current_local %></td>
+          <td><%= project.status %></td>
+          <td><%= project.last_processing %></td>
+          <td><%= link_to project.accessory_docs, project.accessory_docs_url, target: "_blank" %></td>
+          <td><%= link_to "Texto original", project.original_text, target: "_blank" %></td>
+          <td><%= link_to 'Detalhes', project %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
