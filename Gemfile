@@ -52,3 +52,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Nokogiri gem with HTML
 gem 'nokogiri', '~> 1.12', '>= 1.12.3'
+
+# SCSS and Font-Awesome config
+gem 'autoprefixer-rails', '10.2.5'
+gem 'font-awesome-sass', '~> 5.6.1'
